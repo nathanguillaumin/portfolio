@@ -3,8 +3,8 @@ const router = require('express').Router();
 
 router.get('/', projectsController.findAll);
 router.get('/:id', projectsController.findOne);
-router.patch(':id', projectsController.update);
-router.delete(':id', projectsController.delete);
-router.post(':id', projectsController.create);
+router.patch('/:id', projectsController.update);
+router.delete('/:id', projectsController.delete);
+router.post('/', projectsController.create);
 
 module.exports = router;

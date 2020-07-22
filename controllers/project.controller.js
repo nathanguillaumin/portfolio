@@ -67,6 +67,7 @@ class projectsController {
                 const newProject = await Project.create(req.body);
                 res.status(201).send(newProject);
               } catch (err) {
+                  console.log(err)
                 res.status(500).send({
                   errorMessage: err.message || 'Some error occurred while creating the project.'
                 });
