@@ -17,6 +17,8 @@ app.get('/', (request, response) => {
 });
 
 app.use('/users', require('./routes/user.routes.js'));
+app.use('/technologies', require('./routes/technology.routes.js'));
+app.use('/projects', require('./routes/project.routes.js'));
 
 const server = app.listen(port, (err) => {
   if (err) {
