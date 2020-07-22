@@ -1,4 +1,7 @@
 {
     "Welcome to React": "Bienvenue sur React et react-i18next",
-    "Title Introduction": "Développeur web full-stack"
+    "Title Introduction": "Développeur web full-stack",
+    "Subtitle Introduction": "Je code simplement et avec passion.",
+    "Paragraph Introduction": "I started web development in 2019 on a self-taught basis, before enrolling and attending the Wild Code School for 5 months in 2020. I learned JavaScript-based technologies on the front-end and on the back- end. My wish now is to help my clients develop their online presence and develop their websites.",
+    "Question Introduction": "You need a piece of advice for one of your projects?"
   }
