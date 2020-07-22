@@ -1,9 +1,17 @@
 import React from 'react';
 import LanguageSelector from './LanguageSelector';
+import '../styles/header.css';
 
 const Header = () => {
     return (
-        <div>
+        <div className='header'>
+            <nav className='nav-header'>
+                <ul>
+                    <li>Introduction</li>
+                    <li>Technologies</li>
+                    <li>Projets</li>
+                </ul>
+            </nav>
             <LanguageSelector />
         </div>
     );

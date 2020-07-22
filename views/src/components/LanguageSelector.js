@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import i18n from '../i18n';
-import { withNamespaces } from 'react-i18next';
+import '../styles/language-selector.css';
 
 const LanguageSelector = ({t}) => {
   const currentLanguage = i18n.language;
