@@ -12,6 +12,9 @@
   "dependencies": {
     "create-react-app": "^1.5.2",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "i18next": "^19.6.2",
+    "i18next-browser-languagedetector": "^5.0.0",
+    "mysql": "^2.18.1",
+    "react-i18next": "^9.0.10"
   }
 }
