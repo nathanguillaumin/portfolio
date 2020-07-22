@@ -1,10 +1,22 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
+const cors = require('cors');
 const port = 3000;
+const db = require('./db.js');
+
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(cors());
 
 app.get('/', (request, response) => {
   response.send('Bienvenue sur Express');
 });
+
+app.use('/users', require('./routes/user.routes.js'));
 
 const server = app.listen(port, (err) => {
   if (err) {
