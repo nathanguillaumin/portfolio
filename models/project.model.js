@@ -6,7 +6,7 @@ class Project {
     }
 
     static async getOne(id) {
-        return db.query('SELECT * FROM projects WHERE id =', [id])
+        return db.query('SELECT * FROM projects WHERE id = ?', [id])
             .then(rows => rows[0])
     }
 

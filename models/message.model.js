@@ -6,17 +6,17 @@ class Message {
     }
 
     static async getOne(id) {
-        return db.query('SELECT * FROM messages WHERE id =', [id])
+        return db.query('SELECT * FROM messages WHERE id = ?', [id])
             .then(rows => rows[0])
     }
 
-    static async update (data) {
-        return db.query('UPDATE projects SET ? WHERE id = ?', [data, id])
-            .then(() => this.getOne(id))
+    static async updateOne (data, id) {
+        return db.query('UPDATE messages SET ? WHERE id = ?', [data, id])
+            .then(rows => rows[0])
     }
 
     static async remove (id) {
-        return db.query('DELETE * FROM projects WHERE id = ?', [id])
+        return db.query('DELETE * FROM messages WHERE id = ?', [id])
             .then(res => {
                 if (res.affectedRows !== 0) {
                     return Promise.resolve();
@@ -28,13 +28,13 @@ class Message {
                 });
     }
 
-    static async create (newProject) {
-        return db.query('INSERT INTO projects SET ?', newProject)
+    static async create (newMessage) {
+        return db.query('INSERT INTO messages SET ?', newMessage)
             .then(res => {
-                newProject.id = res.insertId;
-                return newProject;
+                newMessage.id = res.insertId;
+                return newMessage;
             })
     }
 }
 
-module.exports = Project;
+module.exports = Message;

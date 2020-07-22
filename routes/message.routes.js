@@ -5,5 +5,6 @@ router.get('/', messagesController.findAll);
 router.get('/:id', messagesController.findOne);
 router.patch('/:id', messagesController.update);
 router.delete('/:id', messagesController.delete);
+router.post('/', messagesController.create);
 
 module.exports = router;

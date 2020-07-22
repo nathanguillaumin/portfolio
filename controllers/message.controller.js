@@ -33,11 +33,12 @@ class messagesController {
             res.status(400).send({ errorMessage: 'Content can not be empty!' });
         } else {
             try {
-                const payload = await Message.updateOne(req.body);
+                const payload = await Message.updateOne(req.body, req.params.id);
                 res.status(200).send(payload);
             }
             catch(err) {
-                    res.status(500).send('Error while trying to update message number' + id)
+                    console.log(err);
+                    res.status(500).send('Error while trying to update message number ' + req.params.id)
             }
         }
     }
@@ -59,6 +60,21 @@ class messagesController {
         }
       }
 
+      static async create (req, res) {
+        if (!req.body) {
+            res.status(400).send({ errorMessage: 'Content can not be empty!' });
+        } else {
+            try {
+                const newMessage = await Message.create(req.body);
+                res.status(201).send(newMessage);
+              } catch (err) {
+                  console.log(err)
+                res.status(500).send({
+                  errorMessage: err.message || 'Some error occurred while creating the message.'
+                });
+              }
+        }
+      }
 }
 
 module.exports = messagesController;
