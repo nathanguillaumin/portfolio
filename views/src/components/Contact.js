@@ -1,27 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import '../styles/contact.css';
+import API from '../API';
 
 const Contact = () => {
 
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
     const handleSubmit = (e) => {
-        'hello'
+        e.preventDefault();
+        API.post('messages', {...formData})
+            .then(res => res.data)
+            .then(data => setFormData({
+                name: '',
+                email: '',
+                message: ''
+            }))
     }
 
     const handleChange = (e) => {
-        'hello'
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
     return (
             <form id='contact' className='contact-form' noValidate autoComplete='off' onSubmit={(e) => handleSubmit(e)}>
+                <h3 style={{marginBottom: '30px'}}>Contactez-moi</h3>
                 <TextField
                     className='input-contact'
                     id='name'
                     label='Nom'
                     variant='outlined'
-                    // value={name}
+                    value={formData.name}
                     onChange={(e) => handleChange(e)}
                     name='name'
+                    required
+                />
+                <TextField
+                    className='input-contact'
+                    id='email'
+                    label='E-mail'
+                    variant='outlined'
+                    value={formData.email}
+                    onChange={(e) => handleChange(e)}
+                    name='email'
+                    type='mail'
                     required
                 />
                 <TextField
@@ -29,7 +55,7 @@ const Contact = () => {
                     id='message'
                     label='Message'
                     variant='outlined'
-                    // value={name}
+                    value={formData.message}
                     onChange={(e) => handleChange(e)}
                     name='message'
                     multiline

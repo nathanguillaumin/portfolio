@@ -7,7 +7,15 @@
     width: 20%;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .call-to-action {
     color: #EBD3BE !important;
     background: #DE781F !important;
+}
+
+.call-to-action:active {
+    box-shadow: none;
 }

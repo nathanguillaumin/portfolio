@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <div className='footer'>
         <ul className='info-contact'>
-            <li><i class="fas fa-phone"></i>  07 86 83 67 83</li>
-            <li><i class="fas fa-at"></i>  nathan.guillaumin@outlook.com</li>
+            <li><i className="fas fa-phone"></i>  07 86 83 67 83</li>
+            <li><i className="fas fa-at"></i>  nathan.guillaumin@outlook.com</li>
         </ul>
         <ul className='nav-footer'>
         <li><a href='https://www.linkedin.com/in/nathanguillaumin/' target='_blank' rel='noopener noreferrer'><LinkedInIcon fontSize='large' /></a></li>
