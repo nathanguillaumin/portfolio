@@ -10,6 +10,7 @@ const Header = () => {
                     <li>Introduction</li>
                     <li>Technologies</li>
                     <li>Projets</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
             <LanguageSelector />

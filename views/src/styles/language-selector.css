@@ -6,7 +6,7 @@
   }
   
   .toggle-container p {
-    color: #9DC5F4;
+    color: #EBD3BE;
   }
   
   .toggle {
@@ -17,8 +17,8 @@
     width: 30px;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #9DC5F4;
-    border: solid 2px #9DC5F4;
+    background-color: #EBD3BE;
+    border: solid 2px #EBD3BE;
     cursor: pointer;
   }
   
@@ -29,7 +29,7 @@
   .indicator {
     height: 100%;
     width: 200%;
-    background: #00155C;
+    background: #DE781F;
     border-radius: 15px;
     transform: translate3d(-75%, 0, 0);
     transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
