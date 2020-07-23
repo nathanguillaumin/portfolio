@@ -12,6 +12,27 @@ class usersController {
           });
         }
       }
+
+
+    static async create (req, res) {
+        const userExists = await User.userAlreadyExists(req.body.email);
+        if (userExists) {
+          res.status(400).send({ errorMessage: 'Email already used' });
+        } else {
+          const clientPayloadInfos = { name: req.body.name, email: req.body.email };
+          const clientPayloadPassword = { password: req.body.password };
+    
+          const isNotEmptyStirng = (str) => {
+            return typeof str === 'string' && str.length > 0;
+          };
+          if (!isNotEmptyStirng(clientPayloadInfos.name) || !isNotEmptyStirng(clientPayloadInfos.email) || !isNotEmptyStirng(clientPayloadPassword.password)) {
+            return res.status(422).send({ errorMessage: 'a required attribute is missing' });
+          }
+    
+          const createdUser = await User.create(clientPayloadInfos.name, clientPayloadInfos.email, clientPayloadPassword.password);
+          res.status(201).send(createdUser);
+        }
+    }
 }
 
 module.exports = usersController;
