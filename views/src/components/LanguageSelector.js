@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import i18n from '../i18n';
 import '../styles/language-selector.css';
 
-const LanguageSelector = ({t}) => {
+const LanguageSelector = ({ t }) => {
   const currentLanguage = i18n.language;
   const [toggled, setToggled] = useState(currentLanguage === 'fr');
 
@@ -16,7 +16,6 @@ const LanguageSelector = ({t}) => {
     i18n.changeLanguage(newLanguage);
     localStorage.setItem('lang', newLanguage);/* eslint-disable-line */
   };
-
 
   return (
     <div className='toggle-container'>

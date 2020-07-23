@@ -1,11 +1,9 @@
 import React from 'react';
 
 const CallToAction = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div />
+  );
 };
 
 export default CallToAction;

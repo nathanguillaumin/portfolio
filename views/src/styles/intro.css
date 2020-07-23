@@ -6,3 +6,8 @@
     border-radius: 20px;
     width: 20%;
 }
+
+.call-to-action {
+    color: #EBD3BE !important;
+    background: #DE781F !important;
+}

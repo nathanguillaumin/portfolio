@@ -1,6 +1,6 @@
-import i18n from "i18next";
-import detector from "i18next-browser-languagedetector";
-import { reactI18nextModule } from "react-i18next";
+import i18n from 'i18next';
+import detector from 'i18next-browser-languagedetector';
+import { reactI18nextModule } from 'react-i18next';
 
 import translationEN from './locales/en/translation.json';
 import translationFR from './locales/fr/translation.json';
@@ -20,8 +20,8 @@ i18n
   .use(reactI18nextModule) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "fr",
-    fallbackLng: "fr", // use en if detected lng is not available
+    lng: 'fr',
+    fallbackLng: 'fr', // use en if detected lng is not available
 
     keySeparator: false, // we do not use keys in form messages.welcome
 

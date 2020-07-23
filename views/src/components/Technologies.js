@@ -2,20 +2,17 @@ import React, { useState, useEffect } from 'react';
 import API from '../API';
 
 const Technologies = () => {
-    const [technologies, setTechnologies] = useState('')
+  const [technologies, setTechnologies] = useState('');
 
-    useEffect(() => {
-        API.get('/technologies')
-            .then(res => res.data)
-            .then(data => setTechnologies(data))
-        
-    }, [])
+  useEffect(() => {
+    API.get('/technologies')
+      .then(res => res.data)
+      .then(data => setTechnologies(data));
+  }, []);
 
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div />
+  );
 };
 
 export default Technologies;
