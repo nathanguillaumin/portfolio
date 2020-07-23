@@ -66,7 +66,7 @@ class technologiesController {
             res.status(400).send({ errorMessage: 'Content can not be empty!' });
         } else {
             try {
-                const newMessage = await Technology.create(req.body);
+                const newTechnology = await Technology.create(req.body);
                 res.status(201).send(newTechnology);
               } catch (err) {
                   console.log(err)

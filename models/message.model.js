@@ -2,7 +2,7 @@ const db = require('../db.js');
 
 class Message {
     static async getAll() {
-        return db.query('SELECT * from messages');
+        return db.query('SELECT * from messages WHERE `read`= 0');
     }
 
     static async getOne(id) {
@@ -10,13 +10,12 @@ class Message {
             .then(rows => rows[0])
     }
 
-    static async updateOne (data, id) {
-        return db.query('UPDATE messages SET ? WHERE id = ?', [data, id])
-            .then(rows => rows[0])
+    static async updateOne (id) {
+        return db.query('UPDATE messages SET `read` = 1 WHERE id = ?', [id])
     }
 
     static async remove (id) {
-        return db.query('DELETE * FROM messages WHERE id = ?', [id])
+        return db.query('DELETE FROM messages WHERE id = ?', [id])
             .then(res => {
                 if (res.affectedRows !== 0) {
                     return Promise.resolve();

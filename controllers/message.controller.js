@@ -29,18 +29,14 @@ class messagesController {
     }
 
     static async update (req, res) {
-        if (!req.body) {
-            res.status(400).send({ errorMessage: 'Content can not be empty!' });
-        } else {
             try {
-                const payload = await Message.updateOne(req.body, req.params.id);
+                const payload = await Message.updateOne(req.params.id);
                 res.status(200).send(payload);
             }
             catch(err) {
                     console.log(err);
                     res.status(500).send('Error while trying to update message number ' + req.params.id)
             }
-        }
     }
 
     static async delete (req, res) {
