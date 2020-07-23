@@ -12,8 +12,8 @@ export class Home extends Component {
       <>
         <Header />
         <Intro />
-        {/* <Technologies />
-        <Projects /> */}
+        <Technologies />
+        <Projects />
         <Contact />
         <Footer />
       </>

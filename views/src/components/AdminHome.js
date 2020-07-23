@@ -3,7 +3,7 @@ import API from '../API';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
-import MessageCard from './MessageCard'
+import MessageCard from './MessageCard';
 
 const AdminHome = () => {
   const [messages, setMessages] = useState();
@@ -49,7 +49,7 @@ const AdminHome = () => {
             <MessageCard
               key={m.id}
               m={m}
-          //     handlePatch={handlePatch}
+              //     handlePatch={handlePatch}
               setMessages={setMessages}
             />
           );
