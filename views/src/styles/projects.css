@@ -1,0 +1,17 @@
+.projects-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    min-height: 500px;
+    margin: 30px;
+}
+
+.card-img-projects {
+    width: 50% !important;
+    min-height: 170px;
+    margin: 0 auto;
+}

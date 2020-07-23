@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Home from './components/Home';
+import AdminHome from './components/AdminHome';
+import Contact from './components/Contact';
 
-function App() {
+import { withNamespaces } from 'react-i18next';
+
+function App ({ t }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <Route exact path='/'><Home /></Route>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+        <Route exact path='/admin'>
+          <AdminHome />
+        </Route>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default withNamespaces()(App);
