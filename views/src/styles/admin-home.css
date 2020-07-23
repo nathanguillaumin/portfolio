@@ -1,0 +1,12 @@
+.card-messages {
+    width: 50%;
+    margin: 20px auto;
+    min-height: 0;
+}
+
+.btn-card {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
