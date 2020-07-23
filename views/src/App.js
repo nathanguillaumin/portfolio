@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 import AdminHome from './components/AdminHome';
+import Contact from './components/Contact';
 
 import { withNamespaces } from 'react-i18next';
 

@@ -1,0 +1,20 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.input-contact {
+    width: 50%;
+    margin-bottom: 30px !important;
+}
+
+.input-submit {
+    margin-bottom: 50px;
+    color: #EBD3BE;
+    background: #DE781F;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}

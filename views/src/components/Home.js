@@ -3,6 +3,7 @@ import Header from './Header';
 import Intro from './Intro';
 import Technologies from './Technologies';
 import Projects from './Projects';
+import Contact from './Contact';
 import Footer from './Footer';
 
 export class Home extends Component {
@@ -11,8 +12,9 @@ export class Home extends Component {
       <>
         <Header />
         <Intro />
-        <Technologies />
-        <Projects />
+        {/* <Technologies />
+        <Projects /> */}
+        <Contact />
         <Footer />
       </>
     );
